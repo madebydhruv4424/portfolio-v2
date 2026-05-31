@@ -308,7 +308,7 @@ export default function Explorations() {
               Experiments, side projects, and things I made just for fun.
             </p>
             <a
-              href="https://github.com/dhruv-coder-tech"
+              href="https://github.com/madebydhruv4424"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm text-muted hover:text-text-primary transition-colors"

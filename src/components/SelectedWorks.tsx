@@ -283,7 +283,7 @@ export default function SelectedWorks() {
           </div>
 
           <a
-            href="https://github.com/dhruv-coder-tech"
+            href="https://github.com/madebydhruv4424"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 text-sm text-muted hover:text-text-primary transition-colors rounded-full border border-stroke px-5 py-2.5 shrink-0"
