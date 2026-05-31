@@ -18,6 +18,16 @@ export default function Background() {
     const video = videoRef.current
     if (!video) return
 
+    // Mobile browsers won't paint a paused video frame — let it loop instead
+    const isMobile = window.matchMedia('(max-width: 768px)').matches || ('ontouchstart' in window)
+
+    if (isMobile) {
+      // Just play it as a looping background on mobile
+      video.play().catch(() => {})
+      return
+    }
+
+    // Desktop: scroll-scrub
     const setupScrub = () => {
       if (!video.duration) return
 
@@ -54,7 +64,9 @@ export default function Background() {
       <video
         ref={videoRef}
         src={`${import.meta.env.BASE_URL}scroll-video-scrub.mp4`}
+        autoPlay
         muted
+        loop
         playsInline
         preload="auto"
         className="absolute w-full h-full object-cover"
