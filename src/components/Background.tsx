@@ -53,7 +53,7 @@ export default function Background() {
       {/* ── Layer 1: Astronaut video (scroll-scrubbed) ── */}
       <video
         ref={videoRef}
-        src="/scroll-video-scrub.mp4"
+        src={`${import.meta.env.BASE_URL}scroll-video-scrub.mp4`}
         muted
         playsInline
         preload="auto"

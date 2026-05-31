@@ -81,7 +81,7 @@ export default function Footer() {
               className="absolute rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 accent-gradient"
               style={{ inset: '-2px' }}
             />
-            <span className="relative z-10 block text-2xl md:text-4xl font-display italic text-text-primary bg-bg rounded-full px-8 py-5 border border-stroke group-hover:border-transparent transition-colors duration-300">
+            <span className="relative z-10 block text-base sm:text-2xl md:text-4xl font-display italic text-text-primary bg-bg rounded-full px-5 sm:px-8 py-3 sm:py-5 border border-stroke group-hover:border-transparent transition-colors duration-300 break-all sm:break-normal text-center">
               dhruvbhatia4244@gmail.com ↗
             </span>
           </a>

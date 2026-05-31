@@ -209,7 +209,7 @@ interface CardData {
 function ExploreCard({ label, sub, rotate, accent, visual }: CardData) {
   return (
     <div
-      className="w-full max-w-[260px] bg-surface/60 border border-stroke rounded-2xl overflow-hidden cursor-pointer group transition-all duration-500 hover:border-white/20 hover:bg-surface/80"
+      className="w-full max-w-[320px] sm:max-w-[260px] bg-surface/60 border border-stroke rounded-2xl overflow-hidden cursor-pointer group transition-all duration-500 hover:border-white/20 hover:bg-surface/80"
       style={{
         transform: `rotate(${rotate}deg)`,
         boxShadow: '0 4px 24px rgba(0,0,0,0.25)',
@@ -320,15 +320,15 @@ export default function Explorations() {
 
         {/* Parallax columns */}
         <div className="absolute inset-0 z-20 pointer-events-none flex items-start justify-center pt-[8vh]">
-          <div className="w-full max-w-[1400px] px-8 md:px-16 grid grid-cols-2 gap-8 md:gap-32">
+          <div className="w-full max-w-[1400px] px-4 sm:px-8 md:px-16 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-32">
             {/* Col 1 — slides up */}
-            <div ref={col1Ref} className="pointer-events-auto flex flex-col gap-6 items-start">
+            <div ref={col1Ref} className="pointer-events-auto flex flex-col gap-6 items-center sm:items-start">
               {col1.map(item => (
                 <ExploreCard key={item.label} {...item} />
               ))}
             </div>
-            {/* Col 2 — slides down */}
-            <div ref={col2Ref} className="pointer-events-auto flex flex-col gap-6 items-end mt-40">
+            {/* Col 2 — slides down (hidden on mobile to avoid clutter) */}
+            <div ref={col2Ref} className="hidden sm:flex pointer-events-auto flex-col gap-6 items-end mt-40">
               {col2.map(item => (
                 <ExploreCard key={item.label} {...item} />
               ))}
