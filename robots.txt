@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://madebydhruv4424.github.io/portfolio-v2/sitemap.xml
+Sitemap: https://dhruvforge.github.io/portfolio-v2/sitemap.xml
